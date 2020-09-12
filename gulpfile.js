@@ -93,7 +93,7 @@ gulp.task("style", function () {
 		.src([
 			//указываем, где брать исходники
 			"node_modules/normalize.css/normalize.css",
-			"node_modules/slick-carousel/slick/slick.css",
+			"node_modules/swiper/swiper-bundle.css",
 		])
 		.pipe(sourcemaps.init())
 		.pipe(concat("libs.min.css")) //склеиваем их в один файл с указанным именем
@@ -109,7 +109,7 @@ gulp.task("script", function () {
 		.src([
 			//тут подключаем разные js в общую библиотеку. Отключите то, что вам не нужно.
 			"node_modules/jquery/dist/jquery.js",
-			"node_modules/slick-carousel/slick/slick.js",
+			"node_modules/swiper/swiper-bundle.js",
 		])
 		.pipe(size())
 		.pipe(sourcemaps.init())

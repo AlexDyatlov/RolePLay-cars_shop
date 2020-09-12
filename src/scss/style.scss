@@ -39,6 +39,11 @@
   border-radius: 35%;
   border: none;
   cursor: pointer;
+  opacity: 0.5;
+  transition: all .3s;
+  &:hover{
+    opacity: 1;
+  }
   &-title{
     font-size: 21px;
     margin-bottom: 20px;
@@ -80,15 +85,19 @@
     box-shadow: 0px 0px 12px -3px rgba(245,142,8,1);
   }
 }
-.car__item{
+.swiper-container {
   width: 100%;
-  height: 50px;
+  height: 325px;
+}
+.car__item{
+  max-width: 428px;
+  width: 97%;
+  min-height: 50px !important;
   border: none;
   border-radius: 15px;
   background-color: rgb(31, 33, 44);
   color: #f4f4f4;
   cursor: pointer;
-  margin-bottom: 5px;
   transition: all .4s;
   &-title{
     font-size: 25px;
@@ -112,29 +121,25 @@
     background-color: #0bf1ff;
   }
 }
-.slider-arrows{
+.swiper-button.swiper-button-disabled {
+  opacity: 0.15;
+}
+.swiper-button{
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 35px;
-  height: 30px;
-  background-color: transparent;
-  border: none;
-  z-index: 5;
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
+  left: 79.6%;
+  outline: transparent;
 }
-.slider-arrows__right{
-  top: -8%;
+.swiper-button-prev{
+  top: 36%;
+  &::after{
+    display: none;
+  }
 }
-.slider-arrows__left{
-  top: 110%;
-}
-.slider-arrows.slick-disabled{
-  cursor: default;
-  opacity: .1;
+.swiper-button-next{
+  top: 64%;
+  &::after{
+    display: none;
+  }
 }
 .btn{
   border: none;
