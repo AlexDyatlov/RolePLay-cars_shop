@@ -22,5 +22,10 @@ $(function(){
     
   });
 
+  $('.color__item').on('click', function(){
+    $('.active').removeClass('active');
+    $(this).addClass('active');
+  });
+
 });
 
